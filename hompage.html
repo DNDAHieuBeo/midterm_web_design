@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="hompage.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="nav-placeholder">
+      <nav id="navbar" class="">
+        <div class="nav-wrapper">
+          <div class="logo">
+            <a href="#home">Logo</a>
+          </div>
+          <ul id="menu">
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Menu Icon -->
+      <div class="menuIcon">
+        <span class="icon icon-bars"></span>
+        <span class="icon icon-bars overlay"></span>
+      </div>
+
+      <div class="overlay-menu">
+        <ul id="menu">
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Welcome to To do list App</h1>
+      <button class="button" id="button">Get Started</button>
+      <div class="banner">
+        <div class="image">
+          <div class="column-image-1">
+            <img class="image1" src="image1.jpg" />
+            <img class="image2" src="image2.jpg" />
+          </div>
+          <img class="image3" src="image3.jpg" />
+        </div>
+      </div>
+    </div>
+    <script>
+      document.getElementById("button").addEventListener("click", myFunction);
+      function myFunction() {
+        window.location.href="listpage.html";
+      }
+    </script>
+  </body>
+</html>

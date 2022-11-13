@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Animated Login Form</title>
+    <link rel="stylesheet" href="register.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+  </head>
+  <body>
+    <div id="nav-placeholder">
+      <nav id="navbar" class="">
+         <div class="nav-wrapper">
+           
+           <div class="logo">
+           
+             <a href="#home">Logo</a>
+           </div>
+           <ul id="menu">
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.hrml">Register</a></li>
+           </ul>
+         </div>
+       </nav>
+       
+       
+       <!-- Menu Icon -->
+       <div class="menuIcon">
+         <span class="icon icon-bars"></span>
+         <span class="icon icon-bars overlay"></span>
+       </div>
+       
+       
+       <div class="overlay-menu">
+         <ul id="menu">
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.hrml">Register</a></li>
+           </ul>
+       </div>
+   </div>
+   <div class="registerpage">
+    <div class="container">
+      <header>Register</header>
+      <img class="avatar" src="avatar.png" />
+      <form>
+        <div>
+          <div class="input-field">
+            <input type="text" required />
+            <label>First name</label>
+          </div>
+          <div class="input-field">
+            <input type="text" required />
+            <label>Last name</label>
+          </div>
+        </div>
+        <div class="input-field">
+          <input type="text" required />
+          <label>Email or Username</label>
+        </div>
+        <div class="input-field">
+          <input class="pswrd" type="password" required />
+          <span class="show">SHOW</span>
+          <label>Password</label>
+        </div>
+        <div class="input-field">
+          <input class="pswrd" type="password" required />
+          <span class="show">SHOW</span>
+          <label>Confirm Password</label>
+        </div>
+
+        <div class="button">
+          <div class="inner"></div>
+          <button>REGISTER</button>
+        </div>
+        <div class="signup">
+          <a href="#">Login</a>
+        </div>
+      </form>
+    </div>
+  </div>
+    <script>
+      var input = document.querySelector(".pswrd");
+      var show = document.querySelector(".show");
+      show.addEventListener("click", active);
+      function active() {
+        if (input.type === "password") {
+          input.type = "text";
+          show.style.color = "#1DA1F2";
+          show.textContent = "HIDE";
+        } else {
+          input.type = "password";
+          show.textContent = "SHOW";
+          show.style.color = "#111";
+        }
+      }
+    </script>
+  </body>
+</html>

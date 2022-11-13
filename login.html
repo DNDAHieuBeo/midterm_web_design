@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Animated Login Form</title>
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="navbar.css" />
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="nav-placeholder">
+      <nav id="navbar" class="">
+        <div class="nav-wrapper">
+          <div class="logo">
+            <a href="#home">Logo</a>
+          </div>
+          <ul id="menu">
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Menu Icon -->
+      <div class="menuIcon">
+        <span class="icon icon-bars"></span>
+        <span class="icon icon-bars overlay"></span>
+      </div>
+
+      <div class="overlay-menu">
+        <ul id="menu">
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="loginpage">
+      <div class="container">
+        <header>Login</header>
+        <form>
+          <div class="input-field">
+            <input type="text" required />
+            <label>Email or Username</label>
+          </div>
+          <div class="input-field">
+            <input class="pswrd" type="password" required />
+            <span class="show">SHOW</span>
+            <label>Password</label>
+          </div>
+          <div class="signup">
+            <a href="resetpassword.html">Fogot password?</a>
+            <a href="register.html">Register</a>
+          </div>
+          <div class="button">
+            <div class="inner"></div>
+            <button id="myBtn">LOGIN</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      var input = document.querySelector(".pswrd");
+      var show = document.querySelector(".show");
+      show.addEventListener("click", active);
+      function active() {
+        if (input.type === "password") {
+          input.type = "text";
+          show.style.color = "#1DA1F2";
+          show.textContent = "HIDE";
+        } else {
+          input.type = "password";
+          show.textContent = "SHOW";
+          show.style.color = "#111";
+        }
+      }
+      document.getElementById("myBtn").addEventListener("click", myFunction);
+      function myFunction() {
+        window.location.href = "hompage.html";
+      }
+    </script>
+  </body>
+</html>
